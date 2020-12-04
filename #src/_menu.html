@@ -1,0 +1,20 @@
+<div class="menu">
+    <div class="menu__wrapper"></div>
+    <div class="_container-menu">
+        <div class="menu__header">
+            <h2 class="menu__title">Menu</h2>
+        </div>
+        <div class="menu__appetizers">
+            <span class="menu__subtitle">food and appetizers</span>
+            <div id="appetizers" class="menu__cards">
+                <menu-card v-for="item in cardInfo" :props="item" :key="item.cardId"></menu-card>
+            </div>
+        </div>
+        <div class="menu__deserts">
+            <span class="menu__subtitle">DESERTS</span>
+            <div id="deserts" class="menu__cards">
+                <menu-card v-for="item in cardInfo" :props="item" :key="item.cardId"></menu-card>
+            </div>
+        </div>
+    </div>
+</div>

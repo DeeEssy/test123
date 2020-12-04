@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	@@include('_head.html',{
+	"title":"Laibas"
+	})
+	<body>
+		<div id="app" class="wrapper">
+			@@include('_header.html',{})
+			<main class="page">
+				<div class="main-page">
+					<div class="main-page__wrapper"></div>
+					<h1 class="main-page__title">Laibas</h1>
+					<span class="main-page__subtitle">restaurant & bar</span>
+				</div>
+				@@include('_info.html', {})
+				<div class="special">
+					<div class="special__wrapper"></div>
+					<span class="special__text">Our Specialities</span>
+				</div>
+				@@include('_assortment.html', {})
+				<div class="img-block">
+					<img src="img/shutterstock_422958463.png" alt="Image" class="img-block__img">
+				</div>
+				@@include('_menu.html', {})
+				@@include('_locations.html', {})
+			</main>
+			@@include('_footer.html',{})
+		</div>
+		@@include('_js.html',{})
+	</body>
+</html>
