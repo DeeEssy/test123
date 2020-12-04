@@ -1,0 +1,342 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 5;
+    padding: 10px 0 0 0;
+    margin-top: -60px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 8px 11px 1px rgba(0, 0, 0, 0.13);
+}
+
+.reserv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px 0 0;
+
+    &__left {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    &__title {
+        font-family: 'AthenaoftheOcean';
+        color: $accent;
+        font-size: 168px;
+        margin-top: -50px;
+    }
+
+    &__desc {
+        max-width: 400px;
+        font-size: 20px;
+        color: $third;
+        margin: 10px auto 35px;
+        line-height: 32px;
+    }
+
+    &__btn {
+        display: inline-block;
+        border: 2px solid $accent;
+        color: $accent;
+        background-color: transparent;
+        padding: 20px 65px;
+        text-transform: uppercase;
+        font-size: 24px;
+        font-weight: 500;
+        max-width: 318px;
+        border-radius: 2px;
+        transition: all 0.2s ease;
+
+        &:hover {
+            background-color: $accent;
+            color: #fff;
+        }
+    }
+
+    &__right {
+        width: 1010px;
+        max-width: 1010px;
+    }
+}
+
+@media (max-width: 1680px) {
+    .reserv {
+        padding: 0 15px 0 0;
+
+        &__title {
+            font-size: 128px;
+        }
+
+        &__desc {
+            max-width: 90%;
+            font-size: 18px;
+            margin: 0 auto 25px;
+        }
+
+        &__btn {
+            font-size: 20px;
+        }
+
+        &__right {
+            width: 800px;
+            max-width: 800px;
+        }
+    }
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &__left {
+        max-width: 600px;
+        width: 600px;
+        border-bottom-left-radius: 8px;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    &__title {
+        font-family: 'AthenaoftheOcean';
+        color: $accent;
+        font-size: 168px;
+    }
+
+    &__desc {
+        max-width: 920px;
+        font-size: 20px;
+        color: $third;
+        margin: 20px auto 0;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 1680px) {
+    .about {
+        &__left {
+            max-width: 535px;
+            width: 535px;
+        }
+        &__right {
+            margin-top: -50px;
+        }
+        &__title {
+            font-size: 128px;
+        }
+
+        &__desc {
+            max-width: 90%;
+            font-size: 18px;
+            margin: 0 auto 0;
+        }
+    }
+}
+@media (max-width: 1400px) {
+    .about {
+        height: 300px;
+        &__left {
+            max-width: 100%;
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        &__right {
+            margin-top: -50px;
+            width: 80%;
+        }
+
+        &__title {
+            font-size: 128px;
+        }
+
+        &__desc {
+            max-width: 90%;
+            font-size: 18px;
+            margin: 0 auto 0;
+        }
+    }
+    .reserv {
+        padding: 0 10px 0 0;
+        height: 300px;
+        &__left {
+            width: 80%;
+        }
+        &__title {
+            font-size: 128px;
+        }
+
+        &__desc {
+            max-width: 90%;
+            font-size: 18px;
+            margin: 0 auto 25px;
+        }
+
+        &__btn {
+            font-size: 20px;
+        }
+
+        &__right {
+            min-width: 100%;
+            width: 100%;
+            max-width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+    }
+}
+@media (max-width: 1024px) {
+    .reserv {
+        &__btn {
+            font-size: 20px;
+            &:hover {
+                background-color: transparent;
+                color: $accent;
+                border: 2px solid $accent;
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .info {
+        padding: 0;
+        border-radius: 0;
+        margin-top: 0;
+    }
+    .reserv {
+        padding: 0;
+        &__title {
+            font-size: 90px;
+        }
+        &__desc {
+            font-size: 16px;
+        }
+        &__btn {
+            font-size: 18px;
+        }
+        &__left {
+            width: 78%;
+        }
+    }
+    .about {
+        &__right {
+            margin-top: -20px;
+        }
+        &__title {
+            font-size: 90px;
+        }
+        &__left {
+            border-bottom-left-radius: 0;
+        }
+        &__desc {
+            font-size: 16px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .reserv {
+        &__title {
+            font-size: 90px;
+            margin-top: -30px;
+        }
+        &__desc {
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        &__left {
+            width: 100%;
+        }
+        &__right {
+            min-width: 80%;
+            width: 100%;
+            max-width: 100%;
+        }
+    }
+
+    .about {
+        &__right {
+            margin-top: -20px;
+            width: 100%;
+        }
+
+        &__left {
+            max-width: 98%;
+            width: 98%;
+        }
+
+        &__title {
+            font-size: 90px;
+        }
+
+        &__desc {
+            font-size: 16px;
+        }
+    }
+}
+@media (max-width: 732px) {
+    .reserv {
+        min-height: 240px;
+        height: auto;
+        justify-content: center;
+        margin-top: 20px;
+        &__title {
+            font-size: 60px;
+            margin-top: -30px;
+        }
+
+        &__desc {
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        &__left {
+            width: auto;
+        }
+
+        &__right {
+            min-width: auto;
+            width: auto;
+            max-width: 100%;
+            display: none;
+        }
+        &__btn {
+            padding: 15px 40px;
+        }
+    }
+
+    .about {
+        min-height: 180px;
+        height: auto;
+        margin-top: 20px;
+        &__right {
+            margin-top: -20px;
+            width: 100%;
+        }
+
+        &__left {
+            max-width: auto;
+            width: auto;
+            display: none;
+        }
+
+        &__title {
+            font-size: 60px;
+        }
+
+        &__desc {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+    }
+}

@@ -1,0 +1,345 @@
+.menu {
+    position: relative;
+    background-image: url('../img/menu-bg.png');
+    background-repeat: no-repeat;
+    background-position: -200px center;
+    background-color: #fff;
+    background-size: cover;
+    padding-bottom: 250px;
+    z-index: 15;
+
+    &__container-menu {
+        z-index: 15;
+    }
+
+    &__wrapper {
+        position: absolute;
+        top: -130px;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url('../img/elements.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100%;
+        width: 100%;
+        height: calc(100% + 130px);
+        z-index: 10;
+    }
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 15;
+    }
+
+    &__title {
+        position: relative;
+        color: #000000;
+        font-family: "AthenaoftheOcean";
+        font-size: 210px;
+        font-weight: 400;
+        letter-spacing: normal;
+        line-height: normal;
+        margin-top: 10px;
+        z-index: inherit;
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            margin-left: -69px;
+            right: 0;
+            background-color: $accent;
+            border-radius: 3px;
+            height: 5px;
+            width: 138px;
+        }
+    }
+
+    &__appetizers {
+        margin-top: 60px;
+    }
+
+    &__deserts {
+        margin-top: 90px;
+    }
+
+    &__subtitle {
+        position: relative;
+        display: block;
+        text-align: center;
+        color: $second;
+        font-size: 30px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        line-height: normal;
+        margin-bottom: 76px;
+        font-weight: 600;
+        z-index: 15;
+    }
+
+    &__cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__card {
+        display: flex;
+        align-items: center;
+        flex-basis: 47%;
+        margin-bottom: 50px;
+        z-index: 15;
+
+        &__text {
+            display: flex;
+            flex-direction: column;
+            margin-right: 20px;
+        }
+
+        &__title {
+            color: #000000;
+            font-size: 27px;
+            text-transform: uppercase;
+            letter-spacing: 1.75px;
+            font-weight: 600;
+        }
+
+        &__desc {
+            margin-top: 20px;
+            color: #393939;
+            font-size: 18px;
+            letter-spacing: 0.24px;
+        }
+
+        &__price {
+            display: flex;
+            align-items: center;
+            font-family: 'EnglishwithIndianRupee';
+            color: $accent;
+            font-size: 57px;
+            font-weight: bold;
+            letter-spacing: 0.74px;
+
+            &__value {
+                font-family: 'Montserrat', sans-serif;
+                color: $accent;
+                font-size: 85px;
+                font-weight: 700;
+                letter-spacing: 0.24px;
+                margin-left: 4px;
+            }
+        }
+    }
+}
+
+@media (max-width: 1680px) {
+    .menu {
+        background-position: -200px center;
+        padding-bottom: 150px;
+
+        &__wrapper {
+            display: none;
+        }
+
+        &__title {
+            font-size: 160px;
+
+            &::after {
+                bottom: -5px;
+            }
+        }
+
+        &__appetizers {
+            margin-top: 40px;
+        }
+
+        &__deserts {
+            margin-top: 40px;
+        }
+
+        &__subtitle {
+            font-size: 24px;
+            margin-bottom: 50px;
+        }
+
+        &__card {
+            flex-basis: 47%;
+            margin-bottom: 50px;
+
+            &__title {
+                font-size: 22px;
+            }
+
+            &__desc {
+                margin-top: 10px;
+                font-size: 16px;
+            }
+            &__price {
+                font-size: 46px;
+                &__value {
+                    font-size: 60px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .menu {
+        background-position: -300px center;
+        padding-bottom: 120px;
+
+        &__wrapper {
+            display: none;
+        }
+
+        &__title {
+            font-size: 120px;
+
+            &::after {
+                bottom: 0;
+            }
+        }
+
+        &__appetizers {
+            margin-top: 40px;
+            padding: 0 10px;
+        }
+
+        &__deserts {
+            margin-top: 40px;
+        }
+
+        &__subtitle {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        &__card {
+            flex-basis: 47%;
+            margin-bottom: 50px;
+
+            &__title {
+                font-size: 20px;
+            }
+
+            &__desc {
+                margin-top: 10px;
+                font-size: 16px;
+            }
+
+            &__text {
+                margin-right: 20px;
+            }
+
+            &__price {
+                font-size: 36px;
+
+                &__value {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .menu {
+        &__card {
+            flex-basis: 47%;
+            margin-bottom: 50px;
+            align-items: flex-start;
+
+            &__title {
+                font-size: 18px;
+            }
+
+            &__desc {
+                margin-top: 10px;
+                font-size: 14px;
+            }
+
+            &__text {
+                margin-right: 20px;
+            }
+
+            &__price {
+                font-size: 30px;
+                &__value {
+                    font-size: 36px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 600px) {
+    .menu {
+        &__card {
+            flex-basis: 100%;
+            &__text {
+                margin-right: 40px;
+            }
+        }
+    }
+}
+@media (max-width: 440px) {
+    .menu {
+        background-position: -850px center;
+        padding-bottom: 80px;
+        &__title {
+            margin-top: 0;
+            &::after {
+                height: 3px;
+            }
+        }
+        &__card {
+            &__text {
+                margin-right: 15px;
+            }
+        }
+        &__deserts {
+            margin-top: 30px;
+        }
+    }
+}
+@media (max-width: 375px) {
+    .menu {
+        &__title {
+            margin-top: 0;
+            font-size: 100px;
+            &::after {
+                bottom: 3px;
+                margin-left: -58px;
+                width: 120px;
+            }
+        }
+
+        &__subtitle {
+            font-size: 18px;
+        }
+
+        &__card {
+            &__title {
+                font-size: 16px;
+            }
+            &__desc {
+                font-size: 12px;
+            }
+            &__price {
+                font-size: 24px;
+                &__value {
+                    font-size: 26px;
+                }
+            }
+            &__text {
+                margin-right: 15px;
+            }
+        }
+
+        &__deserts {
+            margin-top: 10px;
+        }
+    }
+}

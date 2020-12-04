@@ -1,0 +1,297 @@
+
+//<ШРИФТЫ>===============================================================================================
+
+//<Подключаем шрифты>=======================================================================================
+//&display=swap&subset=cyrillic-ext
+@import "fonts";
+//</Подключаем шрифты>=======================================================================================
+
+//</ШРИФТЫ>=======================================================================================================
+
+//<ПЕРЕМЕННЫЕ>===========================================================================================================
+$minWidth: 320px;
+$maxWidth: 1920;
+$maxWidthContainer: 1640;
+$accent: #fc4263;
+$second: #878787;
+$third: #8a8a8a;
+//</ПЕРЕМЕННЫЕ>===========================================================================================================
+
+//<ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+@import "null";
+body {
+	background-color: #f6f4f1;
+	font-family: 'Montserrat', sans-serif;
+	color: #000;
+	font-size: 14px;
+	&._lock {
+		overflow: hidden;
+	}
+}
+//</ОБНУЛЕНИЕ, ОБЩИЕ ПАРАМЕТРЫ>===============================================================================================
+
+//<ОБОЛОЧКА>===========================================================================================================
+.wrapper {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	&._loaded {
+	}
+}
+//</ОБОЛОЧКА>===========================================================================================================
+
+//<ОСНОВНАЯ СЕТКА>===========================================================================================================
+._container {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0 10px;
+	&-menu {
+		max-width: 1400px;
+		margin: 0 auto;
+		padding: 0 10px;
+	}
+}
+@media (max-width: 1680px) {
+	._container {
+		max-width: 1350px;
+		&-menu {
+			max-width: 1300px;
+		}
+	}
+}
+@media (max-width: 1400px) {
+	._container {
+		max-width: 990px;
+
+		&-menu {
+			max-width: 990px;
+		}
+	}
+}
+//</ОСНОВНАЯ СЕТКА>===========================================================================================================
+
+//<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+@import "header";
+@import "footer";
+@import "menu";
+@import "assortment";
+@import "info";
+@import "locations";
+//</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
+
+//<ОСНОВНОЙ БЛОК>====================================================================================================
+*, *::after, *::before {
+	-webkit-tap-highlight-color: transparent;
+}
+::-webkit-scrollbar {
+	width: 4px;
+}
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+::-webkit-scrollbar-thumb {
+	background: $accent;
+}
+.no-scroll {
+	overflow: hidden;
+}
+.page {
+	flex: 1 1 auto;
+}
+.main-page {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	min-height: 100vh;
+	background-image: url('../img/shutterstock_529374250.png');
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+	z-index: 3;
+	&__wrapper {
+		background: rgba(0, 0, 0, 0.6);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+	}
+	&__title {
+		font-size: 449px;
+		color: #fff;
+		z-index: inherit;
+		font-family: 'AthenaoftheOcean';
+		margin-top: -120px;
+	}
+	&__subtitle {
+		margin-top: 40px;
+		font-size: 90px;
+		color: #fff;
+		z-index: inherit;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+}
+@media (max-width: 1680px) {
+	.main-page {
+		&__title {
+			font-size: 340px;
+		}
+
+		&__subtitle {
+			font-size: 60px;
+		}
+	}
+	.special {
+		&__text {
+			font-size: 227px;
+			line-height: 128.33px;
+			margin-top: -150px;
+		}
+	}
+}
+@media (max-width: 1024px) {
+	.header {
+		&__logo {
+			font-size: 100px;
+			height: 80px;
+			width: 130px;
+
+			&__span {
+				top: -30px;
+				left: -5px;
+			}
+		}
+
+		&__item {
+			padding: 0 20px;
+		}
+
+		&__link {
+			font-size: 18px;
+		}
+	}
+	.special {
+		min-height: 80vh;
+	}
+}
+@media (max-width: 991px) {
+	.special {
+		margin-top: 0;
+		min-height: 500px;
+		&__text {
+			font-size: 180px;
+			line-height: 80.33px;
+			margin-top: -100px;
+			max-width: 500px;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.main-page {
+		&__title {
+			font-size: 260px;
+		}
+
+		&__subtitle {
+			font-size: 40px;
+			margin-top: 25px;
+		}
+	}
+}
+
+@media (max-width: 600px) {
+	.img-block {
+		margin-top: -30px;
+	}
+}
+@media (max-width: 440px) {
+	.main-page {
+		&__title {
+			font-size: 200px;
+		}
+
+		&__subtitle {
+			font-size: 32px;
+			margin-top: 15px;
+		}
+	}
+	.img-block {
+		margin-top: -20px;
+	}
+	.special {
+		min-height: 350px;
+
+		&__text {
+			font-size: 120px;
+			margin-top: -70px;
+			max-width: 300px;
+		}
+	}
+}
+@media (max-width: 375px) {
+	.main-page {
+		&__title {
+			font-size: 200px;
+			margin-top: -110px;
+		}
+
+		&__subtitle {
+			font-size: 24px;
+			margin-top: 15px;
+		}
+	}
+}
+.special {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: -60px;
+	min-height: 100vh;
+	background-image: url('../img/shutterstock_323791100.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	z-index: 4;
+	&__wrapper {
+		background: rgba(0, 0, 0, 0.6);
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+	}
+	&__text {
+		color: #fff;
+		z-index: inherit;
+		font-family: "AthenaoftheOcean";
+		font-size: 297px;
+		line-height: 188.33px;
+		margin-top: -150px;
+		max-width: 700px;
+		text-align: center;
+	}
+}
+.img-block {
+	position: relative;
+	width: 100%;
+	max-height: 1080px;
+	margin-top: -60px;
+	position: relative;
+	z-index: 2;
+	&__img {
+		max-width: 100%;
+		object-fit: cover;
+	}
+}
+//===================================================================================================================================
+
+//</ОСНОВНОЙ БЛОК>====================================================================================================
